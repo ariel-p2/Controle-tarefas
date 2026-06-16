@@ -55,7 +55,7 @@ taskflow/
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/usuario/taskflow.git
+   git clone https://github.com/usuario/linkdodeploy.git
    ```
 2. Abra o arquivo `index.html` no navegador — nenhuma instalação necessária.
 

@@ -1,0 +1,112 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Controle de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2>TaskMaster</h2>
+        <nav id="menu-links">
+            </nav>
+    </aside>
+
+    <main class="content">
+        
+        <section id="sec-home" class="app-section id-active">
+            <h1>Bem-vindo ao TaskMaster</h1>
+            <p>Este sistema foi desenvolvido para centralizar, organizar e priorizar suas tarefas diárias de forma simples e eficiente.</p>
+            <p>Utilize o menu lateral para navegar. Cadastre-se ou faça login para liberar as funcionalidades completas do <strong>CRUD</strong>.</p>
+            <div class="card-info">
+                <h3>Recursos do Sistema:</h3>
+                <ul>
+                    <li>Cadastro de tarefas com níveis de prioridade.</li>
+                    <li>Filtro de busca em tempo real.</li>
+                    <li>Armazenamento local persistente (LocalStorage).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="sec-login" class="app-section">
+            <div class="auth-container">
+                <div class="auth-box">
+                    <h2>Entrar no Sistema</h2>
+                    <form id="form-login">
+                        <input type="text" id="login-user" placeholder="Usuário" required>
+                        <input type="password" id="login-pass" placeholder="Senha" required>
+                        <button type="submit">Entrar</button>
+                    </form>
+                </div>
+                <div class="auth-box">
+                    <h2>Criar Nova Conta</h2>
+                    <form id="form-cadastro-user">
+                        <input type="text" id="cad-user" placeholder="Escolha um Usuário" required>
+                        <input type="password" id="cad-pass" placeholder="Escolha uma Senha" required>
+                        <button type="submit" class="btn-secondary">Cadastrar Usuário</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-tarefas" class="app-section">
+            <div class="header-acoes">
+                <h2>Gerenciamento de Tarefas</h2>
+                <button id="btn-abrir-cadastro" onclick="mostrarFormularioCadastro()">➕ Nova Tarefa</button>
+            </div>
+
+            <div id="container-form-tarefa" class="form-popup hidden">
+                <h3 id="form-titulo">Cadastrar Nova Tarefa</h3>
+                <form id="form-tarefa">
+                    <div class="form-group">
+                        <label for="txt-tarefa">Nome da Tarefa * (Obrigatório)</label>
+                        <input type="text" id="txt-tarefa" required placeholder="Ex: Estudar para a prova de PHP">
+                    </div>
+                    <div class="form-group">
+                        <label for="sel-prioridade">Prioridade * (Obrigatório)</label>
+                        <select id="sel-prioridade" required>
+                            <option value="">Selecione...</option>
+                            <option value="Alta">Alta</option>
+                            <option value="Média">Média</option>
+                            <option value="Baixa">Baixa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="txt-descricao">Descrição (Opcional)</label>
+                        <textarea id="txt-descricao" rows="3" placeholder="Detalhes sobre a tarefa..."></textarea>
+                    </div>
+                    <div class="form-botoes">
+                        <button type="submit" id="btn-salvar-tarefa">Salvar</button>
+                        <button type="button" class="btn-cancelar" onclick="fecharFormularioCadastro()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="listagem-container">
+                <div class="busca-box">
+                    <input type="text" id="campo-busca" placeholder="🔍 Buscar tarefa por nome...">
+                </div>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tarefa</th>
+                                <th>Prioridade</th>
+                                <th>Descrição</th>
+                                <th style="width: 180px;">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-tarefas-body">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

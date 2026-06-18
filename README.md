@@ -15,10 +15,6 @@ TaskFlow é um sistema CRUD completo para controle de tarefas, com autenticaçã
 - Pedro Mikaell
 - Jakson
 
-## 🚀 Acesso
-
-🌐 **Sistema publicado:** [https://usuario.github.io/linkdodeploy](https://usuario.github.io/linkdodeploy)
-
 ## ✅ Funcionalidades
 
 - **Login / Cadastro de usuário** com sessão persistente
@@ -50,18 +46,3 @@ taskflow/
 ├── script.js    # Lógica CRUD, autenticação e navegação
 └── README.md    # Documentação
 ```
-
-## 🖥️ Como Rodar Localmente
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/usuario/linkdodeploy.git
-   ```
-2. Abra o arquivo `index.html` no navegador — nenhuma instalação necessária.
-
-## 📦 Deploy no GitHub Pages
-
-1. No repositório GitHub, vá em **Settings → Pages**
-2. Em **Source**, selecione o branch `main` e a pasta `/ (root)`
-3. Clique em **Save**
-4. Acesse em: `https://seu-usuario.github.io/linkdodeploy`
